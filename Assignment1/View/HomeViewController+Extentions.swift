@@ -27,11 +27,19 @@ extension HomeViewController:  UICollectionViewDelegate, UICollectionViewDataSou
             cell.setplanetImage(image: UIImage(imageLiteralResourceName: planetData.results[indexPath.row].name))
             return cell
         }
-        
         fatalError("Unable to dequeue subclass cell")
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(planetData.results[indexPath.row].name)
+
+        print("working?")
+        var nextViewContorller = PlanetViewController()
+        nextViewContorller.planetNameString = planetData.results[indexPath.row].name
+        nextViewContorller.orbitalPeriodString = planetData.results[indexPath.row].orbital_period
+        nextViewContorller.gravityString = planetData.results[indexPath.row].gravity
+        
+        navigationController?.pushViewController(nextViewContorller, animated: true)
     }
+    
+    
 }

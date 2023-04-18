@@ -20,6 +20,7 @@ class HomeViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
         
         myCollectionView?.delegate = self
         myCollectionView?.dataSource = self
@@ -34,6 +35,10 @@ class HomeViewController: UIViewController{
             self.myCollectionView?.reloadData()
             print("Success")
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     
     override func loadView() {
