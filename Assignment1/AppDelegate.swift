@@ -22,9 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = windowScene
         return true
     }
-    
-    // MARK: UISceneSession Lifecycle
-    
+        
     // MARK: UISceneSession Lifecycle
     @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

@@ -32,8 +32,7 @@ extension HomeViewController:  UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        print("working?")
-        var nextViewContorller = PlanetViewController()
+        let nextViewContorller = PlanetViewController()
         nextViewContorller.planetNameString = planetData.results[indexPath.row].name
         nextViewContorller.orbitalPeriodString = planetData.results[indexPath.row].orbital_period
         nextViewContorller.gravityString = planetData.results[indexPath.row].gravity
