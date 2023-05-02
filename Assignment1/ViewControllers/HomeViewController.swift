@@ -13,10 +13,12 @@ class HomeViewController: UIViewController{
     var myCollectionView: UICollectionView?
     
     //define properties
-    var planetData = StarWarsData(results: [])
+    var planetData = StarWarsData(results: []) {
+        didSet{
+            myCollectionView?.reloadData()
+        }
+    }
     
-    //create instance for Class
-    var starWarsApiManager:StarWarsApiManager = StarWarsApiManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +30,7 @@ class HomeViewController: UIViewController{
         myCollectionView?.alwaysBounceVertical = true
         myCollectionView?.backgroundColor = .black
         
-        starWarsApiManager.delegate = self
-        
-        //@escaping completion function (after data fetch from api successfully)
-        starWarsApiManager.fetchAllPlanets {
-            self.myCollectionView?.reloadData()
-            print("Success")
-        }
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,3 +48,16 @@ class HomeViewController: UIViewController{
     }
 }
 
+extension HomeViewController {
+    func configure() {
+        let starWarsModel = StareWarsModel()
+        starWarsModel.delegate = self
+        starWarsModel.fetchData()
+    }
+}
+
+extension HomeViewController:StareWarsOutputs{
+    func dataLoaded(data: StarWarsData) {
+        planetData = data
+    }
+}
