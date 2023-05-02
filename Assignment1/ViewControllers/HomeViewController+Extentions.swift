@@ -7,13 +7,6 @@
 
 import UIKit
 
-//data send apiManager to viewController delegate extention
-extension HomeViewController: StarWarsApiManagerDelegate  {
-    func didUpdatePlanet(planet: StarWarsData) {
-        planetData = planet
-    }
-}
-
 //UICollectionView Delegate Extention
 extension HomeViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

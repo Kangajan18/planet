@@ -14,6 +14,7 @@
 		5A1EB15229EDB75E0085B674 /* HomeViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1EB15129EDB75E0085B674 /* HomeViewController+Extentions.swift */; };
 		5A1EB15429EE432E0085B674 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1EB15329EE432E0085B674 /* PlanetViewController.swift */; };
 		5A1EB15629EE65E80085B674 /* PlanetViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1EB15529EE65E80085B674 /* PlanetViewController+Extention.swift */; };
+		5AA606212A016A62009F040A /* StareWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA606202A016A62009F040A /* StareWarsModel.swift */; };
 		5AABB7D529E53EF200BDC31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AABB7D429E53EF200BDC31D /* AppDelegate.swift */; };
 		5AABB7D729E53EF200BDC31D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AABB7D629E53EF200BDC31D /* SceneDelegate.swift */; };
 		5AABB7D929E53EF200BDC31D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AABB7D829E53EF200BDC31D /* HomeViewController.swift */; };
@@ -29,6 +30,7 @@
 		5A1EB15129EDB75E0085B674 /* HomeViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extentions.swift"; sourceTree = "<group>"; };
 		5A1EB15329EE432E0085B674 /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
 		5A1EB15529EE65E80085B674 /* PlanetViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanetViewController+Extention.swift"; sourceTree = "<group>"; };
+		5AA606202A016A62009F040A /* StareWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StareWarsModel.swift; sourceTree = "<group>"; };
 		5AABB7D129E53EF200BDC31D /* Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AABB7D429E53EF200BDC31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AABB7D629E53EF200BDC31D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,8 +54,8 @@
 		5A1EB14C29EA48070085B674 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5A1EB14829E802010085B674 /* StarWarsApiManager.swift */,
 				5A1EB14629E7252F0085B674 /* StarWarsData.swift */,
+				5AA606202A016A62009F040A /* StareWarsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -61,10 +63,7 @@
 		5A1EB14D29EA480E0085B674 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5AABB7D829E53EF200BDC31D /* HomeViewController.swift */,
-				5A1EB15129EDB75E0085B674 /* HomeViewController+Extentions.swift */,
-				5A1EB15329EE432E0085B674 /* PlanetViewController.swift */,
-				5A1EB15529EE65E80085B674 /* PlanetViewController+Extention.swift */,
+				5A1EB14429E63C1F0085B674 /* SubClassCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -75,6 +74,43 @@
 				5A1EB14A29E80F150085B674 /* Errors.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		5AA6061D2A0166EC009F040A /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				5AABB7D429E53EF200BDC31D /* AppDelegate.swift */,
+				5AABB7D629E53EF200BDC31D /* SceneDelegate.swift */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		5AA6061E2A0166F9009F040A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AABB7D829E53EF200BDC31D /* HomeViewController.swift */,
+				5A1EB15129EDB75E0085B674 /* HomeViewController+Extentions.swift */,
+				5A1EB15329EE432E0085B674 /* PlanetViewController.swift */,
+				5A1EB15529EE65E80085B674 /* PlanetViewController+Extention.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5AA6061F2A016A4C009F040A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5A1EB14829E802010085B674 /* StarWarsApiManager.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5AA606222A018216009F040A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5A1EB14E29EA481A0085B674 /* Error */,
+				5AA6061F2A016A4C009F040A /* Repositories */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		5AABB7C829E53EF200BDC31D = {
@@ -96,15 +132,14 @@
 		5AABB7D329E53EF200BDC31D /* Assignment1 */ = {
 			isa = PBXGroup;
 			children = (
-				5AABB7D429E53EF200BDC31D /* AppDelegate.swift */,
-				5AABB7D629E53EF200BDC31D /* SceneDelegate.swift */,
+				5AA6061D2A0166EC009F040A /* Startup */,
+				5AA606222A018216009F040A /* Core */,
+				5AA6061E2A0166F9009F040A /* ViewControllers */,
+				5A1EB14C29EA48070085B674 /* Model */,
 				5A1EB14D29EA480E0085B674 /* View */,
 				5AABB7DD29E53EF400BDC31D /* Assets.xcassets */,
 				5AABB7DF29E53EF400BDC31D /* LaunchScreen.storyboard */,
 				5AABB7E229E53EF400BDC31D /* Info.plist */,
-				5A1EB14429E63C1F0085B674 /* SubClassCollectionViewCell.swift */,
-				5A1EB14C29EA48070085B674 /* Model */,
-				5A1EB14E29EA481A0085B674 /* Error */,
 			);
 			path = Assignment1;
 			sourceTree = "<group>";
@@ -182,6 +217,7 @@
 				5A1EB14529E63C1F0085B674 /* SubClassCollectionViewCell.swift in Sources */,
 				5A1EB14929E802010085B674 /* StarWarsApiManager.swift in Sources */,
 				5A1EB15429EE432E0085B674 /* PlanetViewController.swift in Sources */,
+				5AA606212A016A62009F040A /* StareWarsModel.swift in Sources */,
 				5A1EB15629EE65E80085B674 /* PlanetViewController+Extention.swift in Sources */,
 				5A1EB15229EDB75E0085B674 /* HomeViewController+Extentions.swift in Sources */,
 				5AABB7D929E53EF200BDC31D /* HomeViewController.swift in Sources */,
